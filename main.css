@@ -1,0 +1,94 @@
+/* 1) 셀렉터에 접근하는 방식은 익힐 것 */
+/* 2) letter-spacing : 2px 아주 인상 깊었어... 글자 사이 간격을 조절하는 것만으로도 완전히 다른 느낌을 주는 듯 */
+/* 3) boydy - background: url(....jpg) */
+/* 4)  line 61, 62, 69 구글링 해볼 것 */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.5em;
+
+  background: url(korea.jpeg);
+  background-size: cover;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 400px;
+  padding: 40px;
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1565c0,
+    #b92b27
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1565c0,
+    #b92b27
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.box .inputBox {
+  position: relative;
+}
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  font-family: "Black Han Sans", sans-serif;
+  font-family: "Gugi", cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+  top: -18px;
+  left: 0;
+  color: #212424;
+  font-size: 12px;
+}
+
+.box input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #212424;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
